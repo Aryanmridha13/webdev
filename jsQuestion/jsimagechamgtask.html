@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #img{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .div{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .div2{
+            width: 64%;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+<div class="div2">
+    <img src="../items/download (1).jpeg" alt="" width="100%" id="img1" onmouseenter="fun()">
+</div>
+ <div id="img">
+ <img src="../items/download (1).jpeg" alt="" width="70%"  id="img1" onmouseenter="fun1()">
+ <img src="../items/download.jpeg" alt="" width="70%"  id="img2" onmouseenter="fun()">
+ <img src="../items/image.jpeg" alt="" width="70%"  id="img3" onmouseenter="fun2()">
+ <img src="../items/res.png" alt="" width="70%"  id="img4" onmouseenter="fun3()">
+ </div>
+</div>
+
+<script>
+    let img1=document.getElementById( "img1")
+    let img2=document.getElementById( "img3")
+    let img=document.getElementById( "img1")
+    let img3=document.getElementById( "img3")
+    let img4=document.getElementById( "img4")
+
+    function fun(){
+        img.src="../items/download.jpeg"
+    }
+    function fun1(){
+        img.src="../items/download (1).jpeg"
+
+    }
+    function fun2(){
+        img.src="../items/image.jpeg"
+        
+    }
+    function fun3(){
+        img.src="../items/res.png"
+    }
+</script>
+</body>
+</html>
