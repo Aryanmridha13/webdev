@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <h1 tabindex="0" >hello bro</h1>
+
+    <input type="text"  onkeyup="alert('this is on key up')">
+    <input type="text"  onkeydown="alert('this is on key down')">
+    <input type="text"  onkeypress="alert('this is on key press')">
+<button onclick="myfunc()" >click</button>
+
+<!-- //write a program to take two input from html and find the sum -->
+<h1 id="h1"></h1>
+<input type="number" id="num1"> 
+<input type="number" id="num2">
+<button onclick="myfunc()">add</button>
+<h1 id="result">
+    
+</h1>
+
+<!--  -->
+
+    <script>
+        
+        //    let n2=n+n1
+        const myfunc=()=>{
+           let n1= parseInt(document.getElementById("num1").value);
+           let n2=parseInt(document.getElementById("num2").value);
+           document.getElementById("result").innerHTML="sum: "+(n1+n2)
+            // console.log(n);
+            // console.log(n1);
+        }
+    </script>
+</body>
+</html>
