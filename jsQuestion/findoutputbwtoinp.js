@@ -9,11 +9,14 @@ const plen=()=>{
     let r1;
 let i
  let r= document.getElementById('result');
-    while( i<=n1){
-      r=n1%10
+    while( i>n1){
+      for(let i=n1;i<=n2;i++){
+      r1=n1%10
       rev=rev*10+r;
       n1=Math.floor(n1/10)
+      }
      
-        
+      
 }
+     r.innerHTML=rev  
 }
