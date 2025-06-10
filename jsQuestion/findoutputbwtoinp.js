@@ -10,7 +10,7 @@ const plen=()=>{
 let i
  let r= document.getElementById('result');
     while( i>n1){
-      for(let i=n1;i<=n2;i++){
+      for(let i=n1;i<n2;i++){
       r1=n1%10
       rev=rev*10+r;
       n1=Math.floor(n1/10)
