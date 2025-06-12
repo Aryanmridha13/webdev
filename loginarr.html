@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="email"  id="email">
+    <input type="text" id="pass">
+    <button onclick="fun()">submit</button>
+
+    <script>
+        // let x=document.getElementById("email").value 
+        // let y=document.getElementById("pass").value 
+        // // console.log(x);
+        // // console.log(y);\
+        let email=["emal1","emal2","emal3","emal4","emal5"]
+        let pass=["pass1","pass22","pass3","pass4","pass5",]
+        
+        
+        function fun(){
+        let x=document.getElementById("email").value 
+        let y=document.getElementById("pass").value
+        
+        let found=false
+        // email.map((e)=>{
+        //     if(e==x){
+        //         alert("value match")
+        //         found =true
+
+        //     }if(found){
+        //         alert("not match")
+        //     }
+            
+        // })
+          
+        console.log(x);
+        let ind=email.findIndex(e=>e===x)
+
+        console.log(x[ind]);
+        if(x===email[ind] && y===pass[ind]){
+          alert("are you login sucsefullly")
+        }
+        else{
+           alert("invalid email and pss")
+        }
+        
+    
+
+        
+    }      
+
+
+            
+        
+          
+
+    </script>
+    
+</body>
+</html>
