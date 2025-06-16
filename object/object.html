@@ -1,0 +1,58 @@
+<!-- in javascript object is a user define data type -->
+ <!-- when we creat a object with new keyward that is called singletan object -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="div">
+
+    </div>
+
+    <script>
+
+        let mysmbl=Symbol("Key")
+        let obj={
+            name:"Ashis",
+            lastname:"parihar",
+            [mysmbl]:"value"
+        }
+
+        console.log(obj.name);
+        console.log(obj["lastname"]);
+
+        obj.middelname="kumar";
+        Object.freeze(obj)
+        obj.name="rohit";
+        console.log(obj);
+
+        let obj1={
+            "key1":"value1",
+            "key2":"value2",
+            "key3":"value3",
+            "key4":"value4"
+        }
+        let obj2={
+            "key5":"value5",
+            "key6":"value6",
+            "key7":"value7",
+            "key8":"value8"
+        }
+
+        let obj3={...obj1,...obj2}
+        console.log(obj3);
+
+      let obj4=  Object.assign({},obj1,obj2)
+        console.log(obj4);
+        
+        
+        
+    </script>
+</body>
+</html> 

@@ -20,7 +20,7 @@ let add1=()=>{
 creat_btn.addEventListener("click",function(){
     Object.assign(creat_from.style,{
         left:"0%",
-        top:"5vh"
+        top:"20vh"
     })
     
 })
