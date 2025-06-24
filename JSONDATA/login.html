@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>this is login page</h1>
+
+    <form action="" id="form">
+       email: <input type="text" id="con_email"><br>
+       password: <input type="text" id="con_pass"><br>
+       <input type="submit">
+    </form>
+    <div id="invalid"></div>
+
+
+    <script>
+        let user=JSON.parse(localStorage.getItem("user")||"[]")
+        let from=document.getElementById("form");
+        let invalid=document.getElementById("invalid")
+        from.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let email=document.getElementById("con_email").value 
+            let password=document.getElementById("con_pass").value 
+
+            let founduser=user.find(e=>e.email===email && e.password===password);
+            if(founduser){
+              localStorage.setItem("islogin",JSON.stringify(founduser))
+                window.location.href="update.html"
+                // window.location.href="/addtocart/add_to_cart.html";
+            }
+            else{
+             invalid.innerHTML="<h1>invalid user</h1>";
+            }
+            
+
+
+        })
+    </script>
+</body>
+</html>
