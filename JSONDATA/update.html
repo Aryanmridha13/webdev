@@ -7,7 +7,14 @@
 </head>
 <body>
     <h1>User profile in Dashboard</h1>
-     <div id="data"></div>
+     <div id="data">
+        <!-- <button onclick="userlogout()" >log out</button>
+        <button onclick="window.location.href='./updateuserdata.html'">Update</button> -->
+     </div>
+     <div >
+        <button onclick="userlogout()" class="btn">log out</button>
+        <button onclick="window.location.href='./updateuserdata.html'"  class="btn">Update</button>
+     </div>
      
 
 
@@ -22,6 +29,19 @@
         <h1>${islogin.mobileno}</h1>
         <h1>${islogin.password}</h1>
         `
+
+
+        const userlogout=()=>{
+            localStorage.removeItem("islogin");
+            window.location.href="./login.html";
+
+            let btn=document.querySelectorAll('.btn')
+            btn.forEach((e)=>{
+               e.style.display="none"
+            }
+                
+            )
+        }
     </script>
 </body>
 </html>
