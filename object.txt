@@ -2,3 +2,7 @@ object is user define data type
 
 in the object data are store in ( key )and (paire) model
                                  -----     ------- 
+ERROR HANDLING
+--------------------
+
+

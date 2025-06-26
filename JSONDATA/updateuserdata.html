@@ -11,24 +11,49 @@
         USer data update page
     </h1>
 
-    <form action="">
-        name: <input type="text" id="uname"><br>
-        email: <input type="text" id="uemail"><br>
-        mobile: <input type="text" id="umobile"><br>
-        password: <input type="text" id="upassword"><br>
+    <form action="" id="updateuser">
+        name: <input type="text" id="name"><br>
+        email: <input type="text" id="email"><br>
+        mobile: <input type="text" id="mobile"><br>
+        password: <input type="text" id="password"><br>
         <input type="submit" value="submit">
     </form>
+    <button onclick="print()">print</button>
 <script>
-
+let print=()=>{
+    window.print();
+}
 let islogin=JSON.parse(localStorage.getItem("islogin"))
 console.log(islogin);
 
 let user =JSON.parse(localStorage.getItem("user",'[]'))
 
-document.getElementById("uname").value=islogin.name;
-document.getElementById("uemail").value=islogin.email;
-document.getElementById("umobile").value=islogin.mobileno;
-document.getElementById("upassword").value=islogin.passwprd;
+document.getElementById("name").value=islogin.name;
+document.getElementById("email").value=islogin.email;
+document.getElementById("mobile").value=islogin.mobileno;
+document.getElementById("password").value=islogin.password;
+
+document.getElementById("updateuser").addEventListener("submit",(a)=>{
+    a.preventDefault();
+    let updatedata={
+        name:document.getElementById("name").value,
+        email:document.getElementById("email").value,
+        mobileno:document.getElementById("mobile").value,
+        password:document.getElementById("password").value,
+        
+    }
+    user=user.map((u)=>{
+        if(islogin.email===u.email){
+            return updatedata; 
+        }
+        return u;
+
+    })
+    localStorage.setItem("user",JSON.stringify(user))
+    localStorage.setItem("islogin",JSON.stringify(updatedata))
+    window.location.href="update.html";
+
+})
 
 
 
