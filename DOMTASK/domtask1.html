@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="/items/image.jpeg" alt="" id="img1">
+    <img src="/items/download (1).jpeg" alt="" id="img2">
+
+    <button>CLICK HERE</button>
+    
+
+
+    <script>
+        let btn = document.querySelector("button")
+        // let img1 = document.querySelector("#img1")
+        // let img2 = document.querySelector("#img2")
+        btn.addEventListener("click",()=>{
+            let img1 = document.querySelector("#img1")
+        let img2 = document.querySelector("#img2")
+            img1.src='/items/download (1).jpeg'
+            img2.src="/items/image.jpeg"
+        })
+    </script>
+
+</body>
+</html>
