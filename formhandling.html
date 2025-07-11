@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form action="" onsubmit="return handelform(event)">
+        name: <input type="text" id="a"><br>
+        email: <input type="text" id="b"><br>
+        password: <input type="text" id="p1"><br>
+        conpassword: <input type="text" id="p2"><br>
+        moblie: <input type="text" id="m"><br><br>
+        <input type="submit" >
+    </form>
+<div id="data">
+
+</div>
+
+    <script>
+        const handelform=(e)=>{
+         
+
+        let name=document.getElementById("a").value;
+        let email=document.getElementById("b").value;
+        let password=document.getElementById("p1").value;
+        let password2=document.getElementById("p2").value;
+        let moblie=document.getElementById("m").value;
+        if(name=='' || email=="" || password=='' || password2=='' || moblie==''  ){
+            document.getElementById("data").innerHTML="<h1>form ke sare field bharo</h1>"
+             e.preventDefault();
+            return false;
+        }
+        else if(password!=password2){
+        document.getElementById("data").innerHTML="<h1>password not match</h1>"
+        e.preventDefault();
+        return false;
+        }
+        else if(moblie.lenght>10 && moblie.lenght<10){
+        document.getElementById("data").innerHTML="<h1>number shoude we 10 digits</h1>"
+        e.preventDefault();
+        return false;
+        }
+        else if(isNaN(moblie)){
+        document.getElementById("data").innerHTML="<h1>numer shoude be digits</h1>"
+        e.preventDefault();
+        return false;
+        }
+
+
+        }
+        
+
+
+
+    </script>
+
+</body>
+</html>

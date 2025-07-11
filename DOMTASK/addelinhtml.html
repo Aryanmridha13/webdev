@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul>
+    <li>apple</li>
+</ul>
+<input type="text"  placeholder="ENTER ELEMENT TO ADD">
+<button id="add">add</button>
+<button id="remove">remove</button>
+
+<script>
+    let add=document.querySelector("#add")
+    let remove=document.querySelector("#remove")
+    let inp=document.querySelector("input").value;
+    let ul=document.querySelector("ul");
+    add.addEventListener('click',()=>{
+
+        
+        if(inp===''){}
+        else{
+        let li=document.createElement('li');
+        li.textContent=inp;
+        ul.appendChild(li);
+        }
+
+    })
+</script>
+
+</body>
+</html>

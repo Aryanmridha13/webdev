@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    
+}
+body{
+    overflow-x: hidden;
+}
+#nav1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+   
+}
+#navpart2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#nav1 h3{
+    font-size: 20px;
+    font-weight: 400;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+#second h3{
+    font-size: 100px;
+    line-height: 120px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 80%;
+    /* background-color: red; */
+    margin-left: 10%;
+    position: relative;
+    z-index: 9;
+}
+#second h3:nth-child(1){
+margin-top: 150px;
+}
+#second h3:nth-child(2){
+text-align: center;
+}
+#second h3:nth-child(3){
+text-align: end;
+}
+#img{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top:10%;
+    left: 40%;
+    rotate: 20deg;
+   
+}
+#img1{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top:10%;
+    left: 40%;
+     rotate: 15deg;
+   
+}
+#img2{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top:10%;
+    left: 40%;
+   
+    
+   
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+}
+#circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    
+   background:linear-gradient(red,royalblue);
+
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(3, 255, 255);
+    /* background-color: #fff; */
+}
+#page3 h1{
+font-size: 40vh;
+text-transform: uppercase;
+color: rgb(0, 0, 0);
+
+}
+#page4{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+}
